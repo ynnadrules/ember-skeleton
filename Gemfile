@@ -11,6 +11,7 @@ gem 'rack-rewrite'
 
 gem 'sass'
 gem 'compass'
+gem 'coffee-script'
 
 gem 'uglifier'
 gem 'yui-compressor'
