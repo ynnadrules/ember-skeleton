@@ -119,6 +119,13 @@ input 'app' do
     concat 'app-tests.js'
   end
 
+  match 'css/**/*.css' do
+    if ENV['RAKEP_MODE'] == 'production'
+      yui_css
+    end
+    concat ['app.scss'], 'app.css'
+  end
+
   match 'css/app.scss' do
     sass
     if ENV['RAKEP_MODE'] == 'production'

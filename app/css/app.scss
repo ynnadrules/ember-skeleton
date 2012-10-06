@@ -1,17 +1,2 @@
-/*
-  This will serve as the root css file for all other .scss files.
-  That way you can control the order inclusion.
-
-  Unfortunately, sass's @import ignores any .css files...so
-  you'll have to rename the extension of any .css file you want
-  to include through this file to .scss
-
-  I know...not ideal at all...especially if you will be using css
-  files from external sources, eg. a jquery plugin's css files.
-
-  The Assetfile will only process this file through the sass compiler
-
-  I have removed the .css matcher.
-*/
 @import 'bootstrap';
 @import 'main';
