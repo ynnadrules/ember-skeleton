@@ -119,20 +119,7 @@ input 'app' do
     concat 'app-tests.js'
   end
 
-  match 'css/**/*.css' do
-    if ENV['RAKEP_MODE'] == 'production'
-      yui_css
-    end
-    concat ['bootstrap.css', 'main.css'], 'app.css'
-  end
-
-  # ignore scss files that start with _
-  # usually scss files that begin with _
-  # are imported in some specific order
-  # which is why I did this instead of 
-  # just letting these scss files get
-  # compiled in the order they're encountered
-  match( /^css\/(.*\/)*[^_]*.scss$/ ) do
+  match 'css/app.scss' do
     sass
     if ENV['RAKEP_MODE'] == 'production'
       yui_css
