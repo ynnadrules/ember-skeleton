@@ -1,1 +1,1 @@
-web: bundle exec rackup -p 3000
+web: bundle exec thin start -p 3000 -R config.ru
